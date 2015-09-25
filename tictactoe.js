@@ -22,25 +22,11 @@ $(window).load(function(){
     //if statement starts
       var thisid = $(this).attr('id');
       //if else for different id's
-      if (thisid == 0) {
+      for (i = 0; i < 9; i++) {
+        if (i == thisid) {
         everything(thisid);
-      } else if (thisid == 1) {
-        everything(thisid);
-      } else if (thisid == 2) {
-        everything(thisid);
-      } else if (thisid == 3) {
-        everything(thisid);
-      } else if (thisid == 4) {
-        everything(thisid);
-      } else if (thisid == 5) {
-        everything(thisid);
-      } else if (thisid == 6) {
-        everything(thisid);
-      } else if (thisid == 7) {
-        everything(thisid);
-      } else if (thisid == 8) {
-        everything(thisid);
-      }
+        }
+      };
     }
   });//square click
 
@@ -119,7 +105,6 @@ function restart() {
 };
   function writeboard(thisid, currentplayer) {
     boardcondition[thisid] = currentplayer;
-    alert(boardcondition);
   };
 
   function startturn(thisid) {
@@ -167,13 +152,11 @@ function restart() {
 
     if (number === 1) {
       players = {x: player1, o: player2};
-      alert(players[x] + ' goes first');
-      $("#announcer").html(players.x + "'s turn");
+      $("#announcer").html(players.x + " goes first");
       return x;
     } else if (number === 2) {
       players = {x: player1, o: player2};
-      alert(players[o] + ' goes first');
-      $("#announcer").html(players.o + "'s turn");
+      $("#announcer").html(players.o + " goes first");
       return o;
     }
   };
